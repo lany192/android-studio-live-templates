@@ -1,0 +1,19 @@
+<templateSet group="Android">
+  <template name="starter" value="public static void start(android.content.Context ctx){&#10;    android.content.Intent i = new Intent(ctx, $ACTIVITY$.class);&#10;    i.putExtra(&quot;custom_key&quot;, $CURSOR$);&#10;    ctx.startActivity(i);&#10;}" description="Creates a static start(...) helper method to start an Activity" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTIVITY" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="CURSOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="ifClick" value="if (!ClickUtil.isFast()) {&#10;    &#10;}" description="add ClickUtil code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="sing" value="    private volatile static $class$ instance;&#10;&#10;    public static $class$ getInstance() {&#10;        if (instance == null) {&#10;            synchronized ($class$.class) {&#10;                if (instance == null) {&#10;                    instance = new $class$();&#10;                }&#10;            }&#10;        }&#10;        return instance;&#10;    }&#10;    &#10;    private $class$(){&#10;        &#10;    }" description="create singleton class" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

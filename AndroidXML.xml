@@ -1,0 +1,48 @@
+<templateSet group="AndroidXML">
+  <template name="Button" value="    &lt;Button&#10;        android:id=&quot;@+id/my_button&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_margin=&quot;8dp&quot;&#10;        android:padding=&quot;8dp&quot;&#10;        android:text=&quot;button&quot;&#10;        android:textColor=&quot;@android:color/black&quot;&#10;        android:textSize=&quot;14sp&quot; /&gt;&#10;        " description="add button xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="TextView" value="    &lt;TextView&#10;        android:id=&quot;@+id/my_text_view&quot;&#10;        android:layout_width=&quot;wrap_content&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_margin=&quot;8dp&quot;&#10;        android:padding=&quot;4dp&quot;&#10;        android:text=&quot;my text view&quot;&#10;        android:textColor=&quot;@android:color/black&quot;&#10;        android:textSize=&quot;14sp&quot; /&gt;&#10;        " description="add TextView xml Code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ImageView" value="    &lt;ImageView&#10;        android:id=&quot;@+id/my_image_view&quot;&#10;        android:layout_width=&quot;wrap_content&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:layout_margin=&quot;8dp&quot;&#10;        android:contentDescription=&quot;@string/app_name&quot;&#10;        android:scaleType=&quot;fitXY&quot;&#10;        android:src=&quot;@mipmap/ic_launcher&quot; /&gt;&#10;        " description="add ImaegView xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ListView" value="    &lt;ListView&#10;    android:id=&quot;@+id/my_list_view&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;wrap_content&quot;&#10;    android:divider=&quot;#dddddd&quot;&#10;    android:dividerHeight=&quot;1px&quot;&#10;    android:scrollbars=&quot;vertical&quot; /&gt;&#10;    " description="add ListView xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="divider" value="    &lt;View&#10;    android:id=&quot;@+id/my_divider_view&quot;&#10;    android:layout_width=&quot;match_parent&quot;&#10;    android:layout_height=&quot;1px&quot;&#10;    android:layout_marginBottom=&quot;8dp&quot;&#10;    android:layout_marginTop=&quot;8dp&quot;&#10;    android:background=&quot;#dddddd&quot; /&gt;&#10;    " description="add divider xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="LinearLayout" value="    &lt;LinearLayout&#10;        android:id=&quot;@+id/my_linear_layout&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;&#10;        android:orientation=&quot;vertical&quot;&#10;        android:paddingBottom=&quot;8dp&quot;&#10;        android:paddingLeft=&quot;8dp&quot;&#10;        android:paddingRight=&quot;8dp&quot;&#10;        android:paddingTop=&quot;8dp&quot;&gt;&#10;&#10;    &lt;/LinearLayout&gt;" description="add LinearLayout xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ScrollView" value="    &lt;ScrollView&#10;        android:id=&quot;@+id/my_scroll_view&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;match_parent&quot;&#10;        android:scrollbars=&quot;none&quot;&gt;&#10;&#10;        &lt;LinearLayout&#10;            android:layout_width=&quot;match_parent&quot;&#10;            android:layout_height=&quot;wrap_content&quot;&#10;            android:orientation=&quot;vertical&quot;&gt;&#10;&#10;        &lt;/LinearLayout&gt;&#10;    &lt;/ScrollView&gt;" description="add ScrollView xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="RecyclerView" value="    &lt;android.support.v7.widget.RecyclerView&#10;        android:id=&quot;@+id/my_recycler_view&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;match_parent&quot;&#10;        android:divider=&quot;#dddddd&quot;&#10;        android:dividerHeight=&quot;4dp&quot; /&gt;" description="add RecyclerView xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ViewPager" value="    &lt;android.support.v4.view.ViewPager&#10;        android:id=&quot;@+id/my_viewpager&quot;&#10;        android:layout_width=&quot;match_parent&quot;&#10;        android:layout_height=&quot;wrap_content&quot;/&gt;" description="add ViewPager xml code" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
