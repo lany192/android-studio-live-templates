@@ -1,0 +1,14 @@
+<templateSet group="AndroidCode">
+  <template name="TextUtils" value="if(TextUtils.isEmpty($cursor$)){&#10;     &#10;}else{&#10;&#10;}" description="add check string null code" toReformat="false" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="null" value="if(null!=$cursor$){&#10;&#10;}else{&#10;&#10;}" description="add check not null code" toReformat="false" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
