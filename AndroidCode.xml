@@ -11,4 +11,22 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="try" value="try {&#10;    $cursor$&#10;} catch (Exception e) {&#10;    Log.e(TAG, e.toString());&#10;}" description="add anomaly detection" toReformat="false" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="list" value="List&lt;$cursor$&gt; items = new ArrayList&lt;&gt;();" description="Create list code" toReformat="false" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="dialog" value="            AlertDialog.Builder builder = new AlertDialog.Builder(context);&#10;            builder.setMessage(&quot;$cursor$&quot;);&#10;            builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {&#10;                @Override&#10;                public void onClick(DialogInterface dialog, int which) {&#10;                    dialog.dismiss();&#10;                }&#10;            });&#10;            builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {&#10;                @Override&#10;                public void onClick(DialogInterface dialog, int which) {&#10;                    dialog.dismiss();&#10;                }&#10;            });&#10;            builder.create().show();" description="Creates an AlertDialog" toReformat="false" toShortenFQNames="true">
+    <variable name="cursor" expression="" defaultValue="This a message" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>
