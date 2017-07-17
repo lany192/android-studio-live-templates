@@ -1,0 +1,27 @@
+<templateSet group="SPHelper">
+  <template name="sps" value="String value = SPHelper.getInstance().getString(&quot;my_string_key&quot;);" description="SP获取一个字符串值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spi" value="int value = SPHelper.getInstance().getInt(&quot;my_int_key&quot;);" description="SP获取一个int值" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spb" value="boolean value = SPHelper.getInstance().getBoolean(&quot;my_boolean_key&quot;);" description="SP获得一个boolean值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spf" value="float value = SPHelper.getInstance().getFloat(&quot;my_float_key&quot;);" description="SP获取一个float值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spl" value="long value = SPHelper.getInstance().getLong(&quot;my_long_key&quot;);" description="SP获取一个long值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
