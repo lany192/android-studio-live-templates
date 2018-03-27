@@ -1,51 +1,27 @@
-<templateSet group="Android">
-  <template name="starter" value="&#10;private static final String KEY_PARAM1 = &quot;key_param&quot;;&#10;private String mParam1;&#10;&#10;public static void start(android.content.Context ctx,String param){&#10;    android.content.Intent i = new Intent(ctx, $ACTIVITY$.class);&#10;    i.putExtra(KEY_PARAM1, param);&#10;    ctx.startActivity(i);&#10;}&#10;&#10;@Override&#10;protected void onCreate(Bundle savedInstanceState){&#10;    super.onCreate(savedInstanceState);&#10;    &#10;    Bundle bundle = getIntent().getExtras();&#10;    if (bundle != null) {&#10;        mParam1 = bundle.getString(KEY_PARAM1);&#10;    } else {&#10;        Log.e(TAG, &quot;onCreate:请检查传单参数&quot;);&#10;        finish();&#10;    }&#10;}" description="Creates a static start(...) helper method to start an Activity" toReformat="true" toShortenFQNames="true">
-    <variable name="ACTIVITY" expression="className()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="ifClick" value="if (!ClickUtil.isFast()) {&#10;    &#10;}" description="判断是否过快点击" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="singleton" value="    private volatile static $class$ instance = null;&#10;&#10;    private $class$(){&#10;    }&#10;    &#10;    public static $class$ getInstance() {&#10;        if (instance == null) {&#10;            synchronized ($class$.class) {&#10;                if (instance == null) {&#10;                    instance = new $class$();&#10;                }&#10;            }&#10;        }&#10;        return instance;&#10;    }" description="创建一个单例" toReformat="true" toShortenFQNames="true">
-    <variable name="class" expression="className()" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="newInstance" value="private static final String KEY_PARAM1 = &quot;key_param&quot;;&#10;private String mParam1;&#10;&#10;public static $fragment$ newInstance(String param1) {&#10;    $fragment$ fragment = new $fragment$();&#10;    $nullChecks$&#10;    android.os.Bundle bundle = new Bundle();&#10;    bundle.putString(KEY_PARAM1, param1);&#10;    fragment.setArguments(bundle);&#10;    return fragment;&#10;}&#10;&#10;@Override&#10;public void onCreate(Bundle savedInstanceState) {&#10;    super.onCreate(savedInstanceState);&#10;    if (getArguments() != null) {&#10;        mParam1 = getArguments().getString(KEY_PARAM1);&#10;    }&#10;}" description="生成Fragment方法" toReformat="true" toShortenFQNames="true">
-    <variable name="fragment" expression="className()" defaultValue="" alwaysStopAt="true" />
-    <variable name="nullChecks" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="const" value="private static final int $name$ = $value$;" description="创建一个静态常量" toReformat="true" toShortenFQNames="true">
-    <variable name="name" expression="" defaultValue="NAME" alwaysStopAt="true" />
-    <variable name="value" expression="groovyScript(&quot;new Random().nextInt(1000)&quot;)" defaultValue="0" alwaysStopAt="false" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="key" value="private static final String KEY_$value$ = &quot;KEY_$value$&quot;;" description="Key for a bundle" toReformat="true" toShortenFQNames="true">
-    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="ife" value="if (TextUtils.isEmpty($VAR$)) {&#10;    &#10;} else {&#10;    &#10;}" description="判断字符串是否为空" toReformat="true" toShortenFQNames="true">
-    <variable name="VAR" expression="suggestFirstVariableName(&quot;Object&quot;)" defaultValue="var" alwaysStopAt="true" />
+<templateSet group="SPHelper">
+  <template name="sps" value="String value = SPHelper.getInstance().getString(&quot;my_string_key&quot;);" description="SP获取一个字符串值" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="dialog" value="android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(context);&#10;            builder.setMessage(&quot;$cursor$&quot;);&#10;            builder.setPositiveButton(android.R.string.yes, new android.content.DialogInterface.OnClickListener() {&#10;                @Override&#10;                public void onClick(DialogInterface dialog, int which) {&#10;                    dialog.dismiss();&#10;                }&#10;            });&#10;            builder.setNegativeButton(android.R.string.cancel, new android.content.DialogInterface.OnClickListener() {&#10;                @Override&#10;                public void onClick(DialogInterface dialog, int which) {&#10;                    dialog.dismiss();&#10;                }&#10;            });&#10;            builder.create().show();" description="创建AlertDialog" toReformat="true" toShortenFQNames="true">
-    <variable name="cursor" expression="" defaultValue="This a message" alwaysStopAt="true" />
+  <template name="spi" value="int value = SPHelper.getInstance().getInt(&quot;my_int_key&quot;);" description="SP获取一个int值" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spb" value="boolean value = SPHelper.getInstance().getBoolean(&quot;my_boolean_key&quot;);" description="SP获得一个boolean值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spf" value="float value = SPHelper.getInstance().getFloat(&quot;my_float_key&quot;);" description="SP获取一个float值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="spl" value="long value = SPHelper.getInstance().getLong(&quot;my_long_key&quot;);" description="SP获取一个long值" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
